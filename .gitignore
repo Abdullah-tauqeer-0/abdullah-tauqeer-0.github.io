@@ -1,0 +1,9 @@
+# Sensitive/Personal Files
+responses.txt
+CV_academic (2).pdf
+*.pdf
+*.docx
+
+# System Files
+.DS_Store
+Thumbs.db
