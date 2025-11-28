@@ -1,494 +1,339 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Abdullah Tauqeer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description"
-        content="Portfolio and academic homepage of Abdullah Tauqeer, Health AI and Computational Imaging researcher." />
-    <style>
-        /* Basic layout */
-        * {
-            box-sizing: border-box;
-        }
 
+    <meta name="author" content="Abdullah Tauqeer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <style>
+        /* Minimalist CSS based on Jon Barron's website style */
         body {
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
+            font-size: 14px;
+            background-color: #ffffff;
+            color: #222;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            background: #f7f7f7;
-            color: #222;
+            line-height: 1.5;
         }
 
-        .page {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2.5rem 1.5rem 3.5rem;
-            background: #ffffff;
-            min-height: 100vh;
-        }
-
-        /* Header + nav */
-        header {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-
-        @media (min-width: 700px) {
-            header {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-end;
-            }
-        }
-
-        h1 {
-            font-size: 2.1rem;
-            margin: 0;
-        }
-
-        .tagline {
-            font-size: 0.95rem;
-            color: #555;
-            margin-top: 0.2rem;
-        }
-
-        .location {
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        nav {
-            margin-top: 0.75rem;
-            font-size: 0.9rem;
-        }
-
-        nav a {
-            margin-right: 0.9rem;
+        a {
+            color: #1772d0;
             text-decoration: none;
-            color: #444;
         }
 
-        nav a:hover {
+        a:hover {
             text-decoration: underline;
         }
 
-        /* Sections */
-        section {
-            margin-top: 2.5rem;
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        h2 {
-            font-size: 1.3rem;
-            margin-bottom: 0.7rem;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 0.2rem;
+        /* Header Table */
+        table.header-table {
+            width: 100%;
+            border: 0;
+            border-spacing: 0;
+            border-collapse: separate;
+            margin-bottom: 40px;
         }
 
-        h3 {
-            font-size: 1.05rem;
-            margin-bottom: 0.1rem;
+        td.bio-text {
+            padding: 2.5%;
+            width: 63%;
+            vertical-align: middle;
+        }
+
+        td.profile-photo {
+            padding: 2.5%;
+            width: 40%;
+            max-width: 40%;
+        }
+
+        td.profile-photo img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        h1.name {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 15px;
+            font-family: 'Lato', Verdana, Helvetica, sans-serif;
         }
 
         p {
-            margin-top: 0.4rem;
-            margin-bottom: 0.4rem;
+            margin-bottom: 15px;
         }
 
-        ul {
-            padding-left: 1.2rem;
-            margin-top: 0.3rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .meta {
-            font-size: 0.9rem;
-            color: #666;
+        .links {
+            text-align: center;
         }
 
         .links a {
-            margin-right: 0.75rem;
-            text-decoration: none;
-            font-size: 0.9rem;
-            color: #0056b3;
+            margin: 0 8px;
         }
 
-        .links a:hover {
-            text-decoration: underline;
+        /* Section Headers */
+        .section-header {
+            width: 100%;
+            border-bottom: 1px solid #e0e0e0;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
         }
 
-        .pill {
-            display: inline-block;
-            padding: 0.1rem 0.55rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            border: 1px solid #ddd;
-            margin-right: 0.25rem;
-            margin-bottom: 0.25rem;
-            color: #555;
-            background: #fafafa;
+        h2 {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 0;
+            color: #000;
         }
 
-        .pub {
-            margin-bottom: 0.7rem;
-            font-size: 0.94rem;
+        /* Research/News Lists */
+        table.item-table {
+            width: 100%;
+            border: 0;
+            border-spacing: 0;
+            border-collapse: separate;
+            margin-bottom: 20px;
         }
 
-        .pub-title {
+        td.item-img {
+            padding: 20px;
+            width: 25%;
+            vertical-align: middle;
+        }
+
+        td.item-img img {
+            width: 100%;
+            max-width: 100%;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        td.item-content {
+            padding: 20px;
+            width: 75%;
+            vertical-align: middle;
+        }
+
+        .paper-title {
             font-weight: 600;
+            color: #000;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
         }
 
-        .pub-venue {
+        .authors {
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .venue {
             font-style: italic;
-        }
-
-        .pub-note {
-            font-size: 0.85rem;
             color: #666;
+            margin-bottom: 10px;
         }
 
-        .list-compact li {
-            margin-bottom: 0.25rem;
+        .desc {
+            font-size: 13px;
+            color: #555;
         }
 
-        footer {
-            margin-top: 3rem;
-            font-size: 0.8rem;
-            color: #999;
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: right;
+            font-size: 12px;
+            color: #888;
         }
 
-        /* Dark mode */
+        /* Dark Mode Support (Optional but nice) */
         @media (prefers-color-scheme: dark) {
             body {
-                background: #111;
-                color: #e6e6e6;
-            }
-
-            .page {
-                background: #181818;
-            }
-
-            h2 {
-                border-color: #333;
-            }
-
-            .meta,
-            .location {
-                color: #aaa;
-            }
-
-            nav a {
+                background-color: #111;
                 color: #ddd;
             }
 
-            .links a {
-                color: #9ec3ff;
+            a {
+                color: #4da6ff;
             }
 
-            .pill {
-                border-color: #444;
-                background: #202020;
-                color: #ccc;
+            h2,
+            .paper-title {
+                color: #fff;
             }
 
-            .pub-note {
+            .section-header {
+                border-color: #333;
+            }
+
+            .authors {
+                color: #bbb;
+            }
+
+            .venue {
+                color: #999;
+            }
+
+            .desc {
                 color: #aaa;
             }
 
-            footer {
-                color: #777;
+            .footer {
+                border-color: #333;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="page">
-        <header>
-            <div>
-                <h1>Abdullah Tauqeer</h1>
-                <div class="tagline">
-                    Health AI &amp; Computational Imaging • Digital Pathology &amp; Live Cell Microscopy
-                </div>
-                <div class="location">North York, ON, Canada</div>
-            </div>
-            <div class="links">
-                <a href="mailto:abdullatauqir@gmail.com">Email</a>
-                <a href="https://scholar.google.com/citations?user=tu3UYkgAAAAJ&amp;hl=en" target="_blank"
-                    rel="noopener noreferrer">Google Scholar</a>
-                <a href="https://github.com/Abdullah-tauqeer-0" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/abdullah-t-050b67218/" target="_blank"
-                    rel="noopener noreferrer">LinkedIn</a>
-            </div>
-        </header>
+    <div class="container">
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#experience">Experience</a>
-            <a href="#teaching">Teaching &amp; Mentoring</a>
-            <a href="#skills">Skills</a>
-        </nav>
+        <!-- Header: Bio & Photo -->
+        <table class="header-table">
+            <tbody>
+                <tr>
+                    <td class="bio-text">
+                        <h1 class="name">Abdullah Tauqeer</h1>
+                        <p>
+                            I am a Health AI researcher working on learning systems for clinical imaging and live cell
+                            microscopy.
+                            My focus is on reliable evaluation, efficient training, and deployment-ready code.
+                        </p>
+                        <p>
+                            Currently, I am a Research Associate at the <strong>QUANTIMB Lab</strong> and a graduate
+                            researcher at
+                            <strong>York University</strong> (Lassonde School of Engineering). I work on machine
+                            learning for digital pathology,
+                            computational imaging, and high-throughput cellular analytics.
+                        </p>
+                        <p class="links">
+                            <a href="mailto:abdullatauqir@gmail.com">Email</a> &nbsp;/&nbsp;
+                            <a href="https://scholar.google.com/citations?user=tu3UYkgAAAAJ&hl=en">Google Scholar</a>
+                            &nbsp;/&nbsp;
+                            <a href="https://github.com/Abdullah-tauqeer-0">GitHub</a> &nbsp;/&nbsp;
+                            <a href="https://www.linkedin.com/in/abdullah-t-050b67218/">LinkedIn</a>
+                        </p>
+                    </td>
+                    <td class="profile-photo">
+                        <img src="images/profile.png" alt="profile photo">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-        <section id="about">
-            <h2>About</h2>
-            <p>
-                I am a Health AI researcher working on learning systems for
-                clinical imaging and live cell microscopy, with a focus on
-                reliable evaluation, efficient training, and deployment-ready
-                code. My recent work includes methods for prostate Gleason
-                grading, metastasis detection in lymph node whole-slide images,
-                and robust nuclei segmentation and tracking in microscopy data.
-            </p>
-            <p>
-                I am currently based in Toronto, working with the QUANTIMB Lab
-                and the Lassonde School of Engineering at York University. I am
-                broadly interested in machine learning for digital pathology,
-                computational imaging, and high-throughput cellular analytics.
-            </p>
-        </section>
+        <!-- Research -->
+        <div class="section-header">
+            <h2>Research</h2>
+        </div>
+        <p>
+            I'm interested in machine learning, medical imaging, and digital microscopy. My research covers weak
+            supervision (MIL),
+            representation learning under distribution shift, and segmentation/tracking in time-lapse microscopy.
+        </p>
 
-        <section id="research">
-            <h2>Research Interests</h2>
-            <p>
-                I work at the intersection of machine learning, medical imaging,
-                and digital microscopy. Methodologically, I am interested in:
-            </p>
-            <ul class="list-compact">
-                <li>Weak supervision &amp; multiple-instance learning for whole-slide images</li>
-                <li>Representation learning under distribution shift (stain &amp; scanner variation)</li>
-                <li>Segmentation and instance-level tracking in time-lapse microscopy</li>
-                <li>Efficient, deployment-ready models for large images and resource-constrained hardware</li>
-            </ul>
-            <p class="meta">
-                Application domains include prostate Gleason grading, breast
-                cancer lymph node metastasis detection, and quantitative
-                analysis of smooth muscle cell behavior in live cell microscopy.
-            </p>
-            <div>
-                <span class="pill">Digital Pathology</span>
-                <span class="pill">Weak Supervision (MIL)</span>
-                <span class="pill">Segmentation &amp; Tracking</span>
-                <span class="pill">Representation Learning</span>
-                <span class="pill">Microscopy Analytics</span>
-            </div>
-        </section>
+        <!-- Publications -->
+        <div class="section-header">
+            <h2>Selected Publications</h2>
+        </div>
 
-        <section id="publications">
-            <h2>Publications &amp; Preprints</h2>
+        <table class="item-table">
+            <tbody>
+                <!-- Paper 1 -->
+                <tr>
+                    <td class="item-content">
+                        <a href="#" class="paper-title">SERN-MIL: Selective Embedding Retrieval & Nuclei-Feature
+                            Aggregation based MIL for Prostate Gleason Grading</a>
+                        <div class="authors">A. Tauqeer, N. Sheibani-Asl, A. Asif, A. Sadeghi-Naini</div>
+                        <div class="venue">Submitted to Nature Methods, 2025</div>
+                        <div class="desc">
+                            A novel MIL approach leveraging selective embedding retrieval to improve prostate cancer
+                            grading accuracy.
+                        </div>
+                    </td>
+                </tr>
 
-            <h3>Manuscripts under review</h3>
+                <!-- Paper 2 -->
+                <tr>
+                    <td class="item-content">
+                        <a href="#" class="paper-title">Detection, Localization, and Staging of Breast Cancer Lymph Node
+                            Metastasis on Whole-Slide Images</a>
+                        <div class="authors">A. Tauqeer, A. Asif, A. Sadeghi-Naini</div>
+                        <div class="venue">Scientific Reports, accepted 2025</div>
+                        <div class="desc">
+                            Weakly supervised framework for detecting metastasis in lymph nodes with high precision.
+                        </div>
+                    </td>
+                </tr>
 
-            <div class="pub">
-                <span class="pub-title">
-                    SERN-MIL: Selective Embedding Retrieval &amp; Nuclei-Feature Aggregation based MIL for Prostate
-                    Gleason Grading.
-                </span>
-                <br />
-                A. Tauqeer, N. Sheibani-Asl, A. Asif, A. Sadeghi-Naini.
-                <br />
-                <span class="pub-venue">Submitted to Nature Methods, 2025.</span>
-            </div>
+                <!-- Paper 3 -->
+                <tr>
+                    <td class="item-content">
+                        <a href="#" class="paper-title">TexSegNet: A Hybrid Encoder and Decoder Model for Robust Nuclei
+                            Segmentation and Classification</a>
+                        <div class="authors">A. Tauqeer, A. Asif, A. Sadeghi-Naini</div>
+                        <div class="venue">EMBC 2025, accepted</div>
+                        <div class="desc">
+                            Robust nuclei segmentation model designed to handle stain and scanner variations.
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-            <div class="pub">
-                <span class="pub-title">
-                    High-Throughput Quantitative Morphometric and Motility Analysis of Cultured Smooth Muscle Cells
-                    Using Machine Learning.
-                </span>
-                <br />
-                M. Parsian, T. Amanpour, A. Tauqeer, S. Francis, A. Asif, R. Wang, A. Sadeghi-Naini.
-                <br />
-                <span class="pub-venue">Submitted to npj Aging, 2025.</span>
-            </div>
-
-            <h3>Accepted &amp; published</h3>
-
-            <div class="pub">
-                <span class="pub-title">
-                    Detection, Localization, and Staging of Breast Cancer Lymph Node Metastasis on Whole-Slide Images.
-                </span>
-                <br />
-                A. Tauqeer, A. Asif, A. Sadeghi-Naini.
-                <br />
-                <span class="pub-venue">Scientific Reports, accepted 2025.</span>
-            </div>
-
-            <div class="pub">
-                <span class="pub-title">
-                    TexSegNet: A Hybrid Encoder and Decoder Model for Robust Nuclei Segmentation and Classification.
-                </span>
-                <br />
-                A. Tauqeer, A. Asif, A. Sadeghi-Naini.
-                <br />
-                <span class="pub-venue">EMBC 2025, accepted.</span>
-            </div>
-
-            <div class="pub">
-                <span class="pub-title">
-                    Improved Lung Segmentation Based on U-Net Architecture and Morphological Operations.
-                </span>
-                <br />
-                S. Naqvi, A. Tauqeer, R. Bhatti, S. B. Ali.
-                <br />
-                <span class="pub-venue">arXiv:2210.10545, 2022.</span>
-            </div>
-
-            <div class="pub">
-                <span class="pub-title">
-                    Application of Feasibility Area for Cybersecurity of Electric Power Systems.
-                </span>
-                <br />
-                A. A. Elaziz, A. Tauqeer, F. Shahid, A. Asif, E. Z. H. Farag.
-                <br />
-                <span class="pub-venue">IEEE PESGM, 2023.</span>
-            </div>
-
-            <div class="pub">
-                <span class="pub-title">
-                    Energy Prediction of PV Panels for Demand and Response System Using ANN.
-                </span>
-                <br />
-                R. Bhatti, A. J. Naqvi, A. Tauqeer.
-                <br />
-                <span class="pub-venue">2023.</span>
-            </div>
-
-            <p class="pub-note">
-                A full and up-to-date list of publications is available on my
-                <a href="https://scholar.google.com/citations?user=tu3UYkgAAAAJ&amp;hl=en" target="_blank"
-                    rel="noopener noreferrer">Google Scholar profile</a>.
-            </p>
-        </section>
-
-        <section id="experience">
+        <!-- Experience -->
+        <div class="section-header">
             <h2>Experience</h2>
+        </div>
 
-            <h3>Research Associate</h3>
-            <p class="meta">
-                QUANTIMB Lab, Toronto, ON &bull; May 2025 &ndash; Present
-            </p>
-            <ul>
-                <li>
-                    Built compute- and memory-efficient pipelines for time-lapse microscopy analysis and cell tracking,
-                    using CUDA and cache-aware tiling for scalable experiments.
-                </li>
-                <li>
-                    Designed reproducible analysis workflows from data ingestion to metrics reporting using Python
-                    notebooks and Docker, with standardized QC for reliable study-to-study comparisons.
-                </li>
-                <li>
-                    Deployed real-time analytics on constrained GPUs (NVIDIA Jetson) and multi-GPU servers, emphasizing
-                    robustness, latency, and throughput.
-                </li>
-            </ul>
+        <table class="item-table">
+            <tbody>
+                <tr>
+                    <td class="item-content">
+                        <span class="paper-title">Research Associate</span>
+                        <div class="venue">QUANTIMB Lab, Toronto, ON &bull; May 2025 – Present</div>
+                        <div class="desc">
+                            Building compute-efficient pipelines for time-lapse microscopy analysis and deploying
+                            real-time analytics on NVIDIA Jetson.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="item-content">
+                        <span class="paper-title">Graduate Researcher</span>
+                        <div class="venue">York University, Toronto, ON &bull; Sep 2023 – May 2025</div>
+                        <div class="desc">
+                            Developed weakly supervised clinical imaging classifiers and custom image stitching tools
+                            for gigapixel whole-slide images.
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-            <h3>Graduate Researcher</h3>
-            <p class="meta">
-                Lassonde School of Engineering, York University, Toronto, ON &bull; Sep 2023 &ndash; May 2025
-            </p>
-            <ul>
-                <li>
-                    Developed weakly supervised clinical imaging classifiers with representation filtering and attention
-                    pooling, improving patient-level F1 by approximately 4% over strong baselines.
-                </li>
-                <li>
-                    Designed a hybrid encoder&ndash;decoder model for robust instance segmentation and classification,
-                    achieving +5.6% F1 under stain and scanner shifts.
-                </li>
-                <li>
-                    Performed large-scale feature mining with selective embedding retrieval to fuse global tissue
-                    patterns and local cellular cues for risk stratification and triage.
-                </li>
-                <li>
-                    Built custom image stitching and tiling tools for gigapixel whole-slide images with validated
-                    geometric fidelity, integrated into training and evaluation pipelines.
-                </li>
-                <li>
-                    Applied SAM-assisted tracking for live cell analytics, quantifying drug effects via migration,
-                    proliferation, and morphology metrics in high-throughput screens.
-                </li>
-            </ul>
-
-            <h3>Computer Vision Team Lead</h3>
-            <p class="meta">
-                NustagOfficial, Islamabad, Pakistan &bull; Sep 2022 &ndash; May 2023
-            </p>
-            <ul>
-                <li>
-                    Led the real-time perception stack for autonomous navigation, combining stereo vision and LiDAR in
-                    C++ on NVIDIA Jetson AGX Xavier.
-                </li>
-                <li>
-                    Developed and optimized sensor fusion pipelines to meet strict latency and reliability requirements
-                    on embedded hardware.
-                </li>
-            </ul>
-        </section>
-
-        <section id="teaching">
-            <h2>Teaching &amp; Mentoring</h2>
-
-            <h3>Graduate Teaching Assistant</h3>
-            <p class="meta">York University &bull; Sep 2023 &ndash; Apr 2025</p>
+        <!-- Footer -->
+        <div class="footer">
             <p>
-                Teaching assistant for EECS 1012, 1516, 2021, 2210. Led labs, graded 300+ assignments, and mentored
-                undergraduate project teams in programming and systems courses.
+                Design inspired by <a href="https://jonbarron.info/">Jon Barron</a>'s website.
             </p>
+        </div>
 
-            <h3>Mitacs Globalink Ambassador &amp; Mentor</h3>
-            <p class="meta">Toronto, ON &bull; Jan 2023 &ndash; Oct 2024</p>
-            <p>
-                Mentored 17 international interns, organizing onboarding and research skills sessions, and supporting
-                students transitioning into Canadian research environments.
-            </p>
-        </section>
-
-        <section id="skills">
-            <h2>Education &amp; Skills</h2>
-
-            <h3>Education</h3>
-            <ul class="list-compact">
-                <li>
-                    <strong>Master of Applied Science, Electrical &amp; Computer Engineering</strong>, York University,
-                    Toronto, ON (Sep 2023 &ndash; Jul 2025) — Grade: A
-                </li>
-                <li>
-                    <strong>Bachelor of Electrical Engineering</strong>, National University of Sciences and Technology
-                    (NUST), Islamabad, Pakistan (Sep 2019 &ndash; Jul 2023) — GPA: 3.69/4.0
-                </li>
-            </ul>
-
-            <h3>Technical Skills</h3>
-            <ul class="list-compact">
-                <li>
-                    <strong>ML:</strong> representation learning, weak supervision (MIL), segmentation, tracking,
-                    transformers.
-                </li>
-                <li>
-                    <strong>Frameworks:</strong> PyTorch, TensorFlow, scikit-learn, OpenCV.
-                </li>
-                <li>
-                    <strong>Engineering:</strong> Git, Docker, Linux, C++/CUDA, distributed and mixed-precision
-                    training.
-                </li>
-                <li>
-                    <strong>Systems &amp; Data:</strong> multi-GPU and HPC, NVIDIA Jetson, tiling for large images,
-                    clinical imaging and digital microscopy, time-lapse experiments.
-                </li>
-            </ul>
-        </section>
-
-        <footer>
-            Last updated: 2025. This page is intentionally simple to remain
-            stable across applications and is inspired by Jon Barron and
-            similar minimalist academic websites.
-        </footer>
     </div>
 </body>
 
